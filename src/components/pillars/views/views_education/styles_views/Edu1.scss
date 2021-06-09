@@ -1,0 +1,152 @@
+@import "../../../../../assets/partials/mixins";
+@import "../../../../../assets/partials/variables";
+
+.container-edu1 {
+	width: 100%;
+	margin: 50px auto;
+	height: 100%;
+	@include flex-column();
+	align-items: center;
+
+	.section-view1{
+		width: 100%;
+		display: grid;
+		grid-template-columns: 30% 70%;
+		.wiew1-1 {
+			text-align: end;
+			img {
+				width: 30%;
+			}
+		}
+
+		.wiew1-2{
+			padding-left: .8em;
+			h3 {
+				color: $background-blue;
+				font-weight: bold;
+				font-size: 3em;
+				letter-spacing: 2px;
+			}
+			h4 {
+				color: $red;
+				font-size: 2em;
+				letter-spacing: 2px;
+			}
+			p {
+				color: $purple;
+				font-weight: 300;
+				font-size: 1.5em;
+			}
+
+			.bold {
+				font-weight: bold;
+				color: $purple;
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	.section-view2{
+		width: 100%;
+		display: grid;
+		grid-template-columns: 30% 70%;
+
+		.wiew2-1 {
+			@include third-icon();
+		}
+
+		.wiew2-2 {
+			display: flex;
+			align-items: center;
+			font-size: 10px;
+			.padding {
+				padding: 0 30% 0 1%;
+				p span {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	.title {
+		text-align: center;
+		color: $purple;
+		font-weight: bold;
+		margin-bottom: 2em;
+	}
+}
+
+
+.section-view3 {
+	margin-bottom: 10em;
+
+
+	.div-father {
+		width: 100%;
+		position: relative;
+
+		.view3-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 30%);
+			justify-content: space-around;
+			background-color: $background-blue;
+			border-radius: 15px;
+			padding: 2em;
+			position: relative;
+
+			.after {
+				padding: 1em;
+				position: relative;
+
+				&::after {
+					content: "";
+					border: none;
+					border-right: 2px $purple solid;
+					position: absolute;
+					left: 0;
+					top: 20%;
+					height: 60%;
+				}
+
+				p {
+					color: #000;
+					font-size: 14px;
+				}
+			}
+		}
+
+		.border-purple {
+			position: absolute;
+			top: 8px;
+			left: 8px;
+			width: 100%;
+			height: 100%;
+			border: $purple 1px solid;
+			border-radius: 15px;
+		}
+	}
+}
+
+@media (max-width: 1086px) {
+
+	// .container-edu1 {
+	// 	.section-view1 {
+	// 		.wiew1-2{
+	// 			p {
+	// 				font-size: 1em;
+	// 			}
+	// 		}
+	// 	}
+	// 	.section-view2 {
+	// 		width: 90%;
+	// 	}
+	// }
+
+
+	// .section-view3 {
+	// 	.div-father {
+	// 		min-width: 60%;
+	// 	}
+	// }
+}
+

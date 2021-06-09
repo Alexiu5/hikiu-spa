@@ -1,0 +1,54 @@
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600;700&display=swap');
+@import './../node_modules/aos/dist/aos.css';
+@import './../node_modules/animate.css/animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600;800&display=swap');
+@import './assets/partials/mixins';
+@import './assets/partials/variables';
+
+/* make the customizations */
+$theme-colors: (
+    "info": tomato,
+    "danger": teal,
+);
+
+$window-res: 1920px;
+
+body {
+    margin: auto;
+    max-width: $window-res;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow-x: hidden;
+
+    @include respond-to('medium') {
+        $window-res: 100vw;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.layout {
+    position: relative;
+    height: 1000px;
+    min-height: 100vh;
+    z-index: 2;
+}
+
+.footer {
+    position: relative;
+    top: -5%;
+    z-index: 4;
+
+    @include respond-to('small') {
+        font-size: 10px;
+    }
+}
+
+// @import "~bootstrap/scss/bootstrap";

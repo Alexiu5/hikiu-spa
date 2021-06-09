@@ -1,0 +1,120 @@
+@import '../../../assets/partials/mixins';
+
+/**
+ * Nav bar styles with responsive adaptation
+ */
+.nav-container {
+	/* Position */
+	position: fixed;
+
+	/* Box Model */
+	display: flex;
+	width: 100%;
+	height: 8%;
+	z-index: 20;
+	align-items: center;
+	justify-content: space-around;
+	
+	.logo {
+		margin-left: 1em;
+		letter-spacing: 4px;
+
+		a {
+			color: $red;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 1.5em;
+		}
+
+		img {
+			width: 30%;
+			height: 30%;
+		}
+	}
+
+	/*
+	* Ul-Container
+	*
+	* Desktop list that contains links for all page 
+	*
+	* 1. List that set by default list styles 
+	* 2. Styles for each link 
+	*/
+	.ul-container {
+		margin-left: 20px;
+		display: flex;
+
+		li {	/* 1 */
+			list-style: none;
+			margin-left: 20px;
+
+			a {	/* 2 */
+				text-decoration: none;
+				color: $white;
+				transition: all 0.3s;
+
+				&:hover {
+					color: $red;
+				}	
+			}
+		}
+	}
+
+	/*
+	* Hamburguer icon
+	*
+	* Defines width and height to 100% but by default is disabled in desktopBa
+	*
+	* 1. Background color must be hidden
+	*/
+	.hamburger-icon-container {
+		width: 100%;
+		height: 100%;
+		display: none;
+
+		// background-color: rgba($color: #000000, $alpha: .2); /* 1 */
+	}
+
+	@include respond-to('medium') {
+		justify-content: start;
+		padding: 0;
+
+		.logo {
+			height: 100%;
+			display: flex;
+			align-items: center;
+
+			img {
+				// width: 40%;
+				// height: 100%;
+				max-width: 100%;
+				max-height: 100%;
+				float: left;
+			}
+		}
+
+		.ul-container {
+			float: left;
+			display: none;
+			width: 20%;
+			margin-left: 0;
+		}
+
+		.hamburger-icon-container {
+			display: initial;
+		}
+	}
+	
+	@include respond-to('small') {
+		.hamburger-icon-container {
+			display: initial;
+		}
+	}
+}
+
+.nav-container.active {
+	background-image: url('../../../assets/banner/banner_background.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

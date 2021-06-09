@@ -1,0 +1,105 @@
+@import "../../../../../assets/partials/mixins";
+
+.container-Stra3 {
+  width: 80%;
+  margin: auto;
+  padding: 1em;
+  .icon img {
+    width: 50%;
+  }
+
+  .section-view1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .wiew1-1 {
+      color: $red;
+    }
+
+    .wiew1-2 {
+      padding: 1em;
+      font-weight: bold;
+    }
+  }
+  .text-bolder {
+    font-weight: bold;
+  }
+  .div-father {
+    width: 100%;
+    position: relative;
+    .Stra3-section-view2 {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 48%);
+      justify-content: space-around;
+      color: $purple;
+      background-color: $background-blue;
+      border-radius: 15px;
+      padding: 3em;
+      gap: 2em;
+      .view2-1 {
+        display: grid;
+        grid-template-columns: repeat(2,48%);
+        align-items: center;
+        gap: 2em;
+        .between-border {
+          position: relative;
+          &::after {
+            content: "";
+            background-color: $purple;
+            border: none;
+            border-right: 2px $purple solid;
+            height: 60%;
+            position: absolute;
+            left: -2em;
+            top: 20%;
+            bottom: 0;
+          }
+        }
+      }
+      .view2-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        align-items: center;
+        gap: 2em;
+        .between-border {
+          position: relative;
+          &::after {
+            content: "";
+            background-color: $purple;
+            border: none;
+            border-right: 2px $purple solid;
+            height: 60%;
+            position: absolute;
+            left: -2em;
+            top: 20%;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    .border-purple {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 100%;
+      height: 100%;
+      border: $purple 1px solid;
+      border-radius: 15px;
+    }
+  }
+
+  @include respond-to('medium') {
+    width: 90%;
+  
+    .view2-1,
+    .view2-2 {
+      p {
+        font-size: 8px;
+        position: relative;
+        left: -10px;
+      }
+    }
+  }
+}

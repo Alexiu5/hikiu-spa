@@ -1,0 +1,43 @@
+@import "../../../../assets/partials/variables";
+
+.container_inno {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  background-color: $white;
+}
+
+.texto_blue{
+  color: $blue;
+  font-size: 2em;
+  letter-spacing: 3px;
+  font-weight: bold;
+  line-height: 2em;
+}
+
+.texto_red {
+  color: $red;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+
+.texto_purple {
+  color: $purple;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.texto_negrilla {
+  margin: 1.2em 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.style_img {
+  margin-top: 2em;
+}
+.style_img img {
+  min-width: 300px;
+  width: 30%; 
+}

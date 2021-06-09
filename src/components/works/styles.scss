@@ -1,0 +1,68 @@
+@import '../../assets/partials/mixins';
+
+#works-container {
+	@include content(100%, $red);
+	// background-image: url('../../assets/svg/red_pattern.svg');
+	padding: 0 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-height: 100vh;
+	z-index: 1;
+
+	.title {
+		position: relative;
+		top: 10%;
+
+		width: 100%;
+		height: 20%;
+		margin: 0 auto;
+		
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 2.2em;
+		letter-spacing: 5px;
+		word-spacing: 5px;
+	}
+
+	#slideshow {
+		width: 80%;
+		height: 100%;
+	}
+
+	#slideshow .slide {
+		min-width: 70vw;
+		min-height: 70vh;
+
+		@include respond-to('medium') {
+			min-width: 70vw;
+			min-height: 40vh;
+		}
+	}
+
+	@include respond-to('medium') {
+		max-height: 60vh;
+		.title {
+			width: 100%;
+			font-size: 2em;
+		}
+	}
+
+	@include respond-to('small') {
+		max-height: 100vh;
+
+		.title {
+			font-size: 1.2em;
+			height: 20%;
+		}
+
+		#slideshow {
+			height: 100%;
+
+			.slider {
+				height: 75%;
+			}
+		}
+	}
+}

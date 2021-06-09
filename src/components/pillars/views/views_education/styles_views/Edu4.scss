@@ -1,0 +1,93 @@
+@import "../../../../../assets/partials/mixins";
+@import "../../../../../assets/partials/variables";
+
+.container-edu4 {
+  width: 80%;
+  margin: 50px auto;
+  height: 100%;
+  @include flex-column();
+  align-items: center;
+  justify-content: center;
+
+  .section-view1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    .wiew1-1 {
+      text-align: end;
+      img {
+        width: 30%;
+      }
+    }
+
+    .wiew1-2 {
+      padding-left: .8em;
+
+      h3 {
+        color: $background-blue;
+        font-weight: bold;
+        font-size: 3em;
+        letter-spacing: 2px;
+      }
+
+      h4 {
+        color: $red;
+        font-size: 2em;
+        letter-spacing: 2px;
+      }
+
+      p {
+        color: $purple;
+        font-weight: 300;
+        font-size: 1.5em;
+      }
+
+      .bold {
+        font-weight: bold;
+        color: $purple;
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .section-view2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    .wiew2-1 {
+      @include third-icon();
+    }
+
+    .wiew2-2 {
+      display: flex;
+			align-items: center;
+      .padding {
+        padding: 0 30% 0 1%;
+        p span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1086px) {
+
+	.container-edu4 {
+		.section-view1 {
+			.wiew1-2{
+	
+				p {
+					font-size: 1em;
+				}
+			}
+		}
+		.section-view2 {
+			width: 90%;
+      .view2-2 {
+        padding: 0 30% 0 2%;
+      }
+		}
+	}
+}

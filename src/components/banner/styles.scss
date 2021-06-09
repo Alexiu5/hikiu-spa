@@ -1,0 +1,175 @@
+@import '../../assets/partials/mixins';
+
+/*
+* set color bold mixin
+*
+* Local mixin that is intended to be used in p or strong tags
+* this allows to change to any color and sets the font weight to bold when it's needed
+*/
+@mixin set-color-bold($color) {
+	color: $color;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/*
+* Banner
+*
+* This component is the principal part of the page, it resizes to any dimension and keeps 
+* any object align to center
+*
+* 1. Default height set to 100vh, this makes the banner always full screen size.
+*/
+#banner { 
+	@include content(100%);
+	min-height: 100vh; /* 1 */
+	padding-top: 0;
+
+	background-attachment: fixed;
+	background-image: url('../../assets/banner/banner_background.svg');
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.banner-container {
+		@include flex-column();
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	.icon {
+		fill: white;
+		width: 80px;
+		height: 140px;
+	}
+
+	.text-principal {
+		letter-spacing: 3px;
+		font-size: 2em;
+	}
+
+	.text-red {
+		color: $red;
+	}
+	
+	.text-white {
+		color: $white;
+	}
+
+	.text-white-bold {
+		@include set-color-bold($white);
+	}
+
+	.text-red-bold {
+		@include set-color-bold($red);
+	}
+
+	.before-line::before {
+		content: "";
+		margin: 3em 0;
+		background-color: $white;
+		width: 20%;
+		height: 2px;
+		display: inline-block;
+	}
+
+	/*
+	* Icons container
+	*
+	* This container must display in row aligned in center 
+	* another div aligned in column
+	*/
+	.icons-container {
+		@include flex-row(40%, 100%);
+		position: relative;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.icon-text {
+		@include flex-column();
+		width: 20%;
+		align-items: center;
+
+		.icon {
+			width: 50%;
+			height: 80%;
+			max-width: 80px;
+			max-height: 100px;
+			margin-bottom: 10px;
+		}
+
+		p {
+			display: block;
+			color: $white;
+		}
+	}
+
+	.signs {
+		color: $white;
+		font-weight: bold;
+		margin: 0 0.5em;
+		font-size: 3em;
+	}
+
+	.equals-container {
+		width: 50%;
+		text-align: left;
+		span {
+			width: 100%;
+			margin-bottom: -5px;
+			display: block;
+			font-size: 26px;
+			line-height: 1.4em;
+		}
+
+		span:nth-child(2) {
+			font-style: italic;
+			font-weight: 300;
+		}
+	}
+
+	@include respond-to('small') {
+		position: relative;
+		top: -10%;
+		max-height: 100vh;
+
+		padding: 0 10%;
+		.icons-container {
+			width: 50%;
+		}
+
+		.before-line::before {
+			margin: 0;
+		}
+
+		.icon-text {
+			margin: 0 5px;
+			.icon {
+				min-width: 30px;
+				min-height: 50px;
+				margin-bottom: 0;
+			}
+
+			p {
+				font-size: 10px;
+			}
+		}
+
+		.signs {
+			width: 20%;
+			font-size: 1em;
+		}
+
+		.equals-container {
+			display: flex;
+			justify-content: center;
+
+			span {
+				font-size: 16px;
+			}
+		}
+	}
+}

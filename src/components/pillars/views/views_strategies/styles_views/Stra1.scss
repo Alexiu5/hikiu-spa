@@ -1,0 +1,86 @@
+@import "../../../../../assets/partials/mixins";
+
+.container-Stra1 {
+  width: 80%;
+  margin: auto;
+  padding: 1em;
+
+  .icon {
+    width: 50%;
+  }
+
+  .section-view1{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .wiew1-1{
+      h3 {
+        color: $purple;
+        font-size: 2em;
+      }
+    }
+    .wiew1-2{
+      padding: 1em;
+    }
+  }
+  .div-father {
+    width: 100%;
+    position: relative;
+
+      .section-view2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 23%);
+        justify-content: space-between;
+        color: $purple;
+        background-color: $background-blue;
+        border-radius: 15px;
+        padding: 3em;
+        position: relative;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          padding-left: 1em;
+
+          &::after {
+            content: "";
+            background-color: $purple;
+            border: none;
+            border-right: 2px $purple solid;
+            height: 60%;
+            position: absolute;
+            left: 0;
+            top: 20%;
+            bottom: 0;
+          }
+        }
+      }
+      .border-purple{
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 100%;
+        height: 100%;
+        border: $purple 1px solid;
+        border-radius: 15px;
+      }
+  }
+
+  @include respond-to('medium') {
+    width: 90%;
+
+    .section-view2 {
+      p {
+        font-size: 8px;
+        position: relative;
+        left: -10px;
+      }
+    }
+
+
+  }
+}

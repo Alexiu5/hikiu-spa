@@ -1,0 +1,9 @@
+@import '../../../assets/partials/mixins';
+
+.figure {
+    clip-path: inset(0 0 50% 0 round 50% 50% 0 0 );
+}
+
+.figure-rotate {
+    clip-path: inset(50% 0  0 round 0 0 50% 50%);
+}

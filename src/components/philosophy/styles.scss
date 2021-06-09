@@ -1,0 +1,236 @@
+@import '../../assets/partials/mixins';
+
+@mixin card {
+    position: absolute;
+    width: 75%;
+    height: 70%;
+    max-height: 270px;
+    left: 0;
+    border-radius: 0 35px 35px 0;
+    bottom: 30%;
+
+    @include respond-to('medium') {
+        bottom: 0%;
+        top: 40%;
+        max-height: 160px;
+    }
+
+    @include respond-to('small') {
+        width: 95%;
+        height: 100%;
+        bottom: 0%;
+        top: 40%;
+        max-height: 140px;
+    }
+}
+.philosophy-container {
+    @include flex-row(100%, 70%);
+    padding-top: 2%;
+
+    .section {
+        height: 100%;
+        min-height: 500px;
+        width: 50%;
+    }
+    
+    .left {
+        padding-left: 10%;
+        position: relative;
+        z-index: 1;
+    
+        .content-container {
+            @include flex-column();
+        }
+        
+        .title {
+            @include flex-column(100%, 30%);
+            z-index: 3;
+            padding-top: 10%;
+            justify-content: left;
+    
+            .blue {
+                color: $blue;
+            }
+    
+            .red {
+                color: $red;
+            }
+    
+            .purple {
+                color: $purple;
+            }
+    
+            span {
+                display: block;
+                font-size: 28px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                line-height: 2.2rem; 
+                word-spacing: 5px;
+                text-transform: uppercase;
+            }
+        }
+
+        .shadow-content {
+            @include card();
+            z-index: 3;
+            border: 2px solid $purple;
+            transform: translate3d(-20px, 10px, 0)
+        }
+        
+        .card-container {
+            @include card();
+            z-index: 2;
+            padding-left: 20%;
+            background-image: url('../../assets/svg/red_pattern.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            filter: opacity(.95);
+    
+            .card-content {
+                align-content: center;
+                width: 100%;
+                height: 100%;
+                padding:  15% 10% 15% 0%;
+                padding-left: 0;
+                font-size: 18px;
+    
+                p {
+                    word-spacing: .1em;
+                    width: 80%;
+                    color: $white;
+                }
+    
+                .bold {
+                    color: $white;
+                }
+            }
+        }
+    
+        .summary {
+            position: absolute;
+            color: black;
+            bottom: 8%;
+            width: 70%;
+            max-height: 200px;
+    
+            p{
+                letter-spacing: 5px;
+                word-spacing: 5px;
+                line-height: 25px;
+                color: $purple;
+                font-weight: thin;
+    
+                .text-purple {
+                    text-transform: lowercase;
+                }
+    
+                .text-red {
+                    font-size: 1.3rem;
+                    text-transform: lowercase;
+                    color: $red;
+                }
+            }
+        }
+    }
+    
+    .right {
+        position: relative;
+
+        .welcome-image {
+            width: 100%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .welcome-container {
+            width: 100%;
+            position: absolute;
+            bottom: 8%;
+            max-height: 300px;
+    
+            .welcome {
+                @include flex-column();
+                width: 100%;
+                align-items: center;
+                color: $purple;
+                
+                .top {
+                    letter-spacing: 4px;
+                    word-spacing: 4px;
+                    font-size: 28px;
+                }
+                
+                .bottom {
+                    letter-spacing: 2px;
+                    word-spacing: 2px;
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+    }
+
+    @include respond-to('medium') {
+        @include flex-column(100%, 100%);
+
+        .section {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .left {
+            .title {
+                height: 20%;
+                width: 80%;
+            }
+
+            .card-container {
+                padding-left: 10%;
+                .card-content {
+                    padding: 5% 0;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .summary {
+                width: 80%;
+                bottom: 0;
+                font-size: 14px;
+            }
+        }
+    }
+
+    @include respond-to('small') {
+        .left .card-container .card-content p {
+            font-size: 12px;
+        }
+
+        .right {
+            padding: 10px;
+            .welcome-image {
+                overflow: visible;
+            }
+
+            .welcome-container {
+                .welcome {
+                    .top {
+                        font-size: 20px;
+                    }
+
+                    .bottom {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+

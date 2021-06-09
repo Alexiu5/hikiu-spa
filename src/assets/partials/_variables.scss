@@ -1,0 +1,12 @@
+$purple: #4E237C;
+$red: #BD2F3E;
+$background-blue: #D5E7F2;
+$blue: #41CAD9;
+$white: #FFFFFF;
+$gray: #b8b8b8;
+
+$breakpoints : (
+    'small': (max-width: 500px),
+    'medium': (max-width: 800px),
+    'large': (max-width: 1200px)
+);
