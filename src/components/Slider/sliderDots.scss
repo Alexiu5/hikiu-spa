@@ -9,15 +9,17 @@
     width: fit-content;
 
     & span {
-      background-color: orange;
-      width: 20px;
-      height: 20px;
+      background-color: #ff7b7b;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      margin: 0 15px;
+      margin: 0 .5em;
       display: inline-block;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
 
       &.active {
-        background-color: purple;
+        background-color: #BD2F3E;
       } 
 
     }

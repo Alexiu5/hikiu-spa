@@ -24,6 +24,8 @@ const Slider = ({ children }) => {
 
 	return (
 		<div className="slides-parent" ref={sliderContainer}>
+			<button className="arrow left" onClick={() => dispatch({ type: slider_consts.BACKSLIDE })} ></button>
+			<button className="arrow right" onClick={() => dispatch({ type: slider_consts.NEXTSLIDE })}></button>
 			<div className="slides">{children.map((item) => (
 				<div className="slide-item">{item}</div>
 			))}</div>

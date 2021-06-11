@@ -1,3 +1,5 @@
+@import '../../assets/partials/mixins';
+
 .slides-parent {
   position: relative;
   width: 100%;
@@ -17,5 +19,33 @@
       width: 80vw;
       margin: 0 10vw;
     }
+
+  }
+
+  .arrow {
+    z-index: 2;
+    position: absolute;
+    top: 30%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+    margin: 0 10%;
+
+    &.left {
+      background-image: url('../../assets/svg/left.svg');
+      left: 0;
+    }
+
+    &.right {
+      background-image: url('../../assets/svg/right.svg');
+      right: 0;
+    }
+
   }
 }
