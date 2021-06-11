@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles_views/Edu2.scss';
+// import './styles_views/Edu2.scss';
 import icon from '../../../../assets/svg/dos_active.svg';
 import imgIcon from '../../../../assets/svg/educacion_dos.svg';
 
@@ -10,10 +10,10 @@ const educacion = {
 	icono: 'icono',
 };
 
-const ViewEdu2 = () => {
+const StrategySlide = () => {
 	const { index, hikiu, titulo_rojo, texto_morado, icono } = educacion;
 	return (
-		<div className="container-edu2">
+		<div>
 			<div className="section-view1">
 				<div className="wiew1-1">
 					<img src={icon} alt="" />
@@ -48,4 +48,4 @@ const ViewEdu2 = () => {
 	);
 };
 
-export default ViewEdu2;
+export default StrategySlide;

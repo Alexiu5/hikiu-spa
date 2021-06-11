@@ -1,16 +1,17 @@
 import React from 'react';
-import './styles_views/Edu3.scss';
-import icon from '../../../../assets/svg/tres_active.svg';
-import imgIcon from '../../../../assets/svg/educacion_tres.svg';
+// import './styles_views/Edu4.scss';
+import icon from '../../../../assets/svg/cuatro_active.svg';
+import imgIcon from '../../../../assets/svg/educacion_cuatro.svg';
 
 const educacion = {
 	hikiu: 'HIKIU',
-	titulo_rojo: 'COMUNICANDO CON SENTIDO',
-	texto_morado: 'Fórmula para multiplicar',
-	texto_morado1: 'LA VOZ DE TU MARCA',
+	titulo_rojo: 'COMERCIAL',
+	texto_morado: 'Fórmula para',
+	texto_morado1: 'RENTABILIZAR TUS IDEAS',
 	icono: 'icono',
 };
-const ViewEdu3 = () => {
+
+const CommercialSlide = () => {
 	const {
 		hikiu,
 		titulo_rojo,
@@ -19,7 +20,7 @@ const ViewEdu3 = () => {
 		texto_morado1,
 	} = educacion;
 	return (
-		<div className="container-edu3">
+		<div>
 			<div className="section-view1">
 				<div className="wiew1-1">
 					<img src={icon} alt="" />
@@ -38,19 +39,18 @@ const ViewEdu3 = () => {
 				<div className="wiew2-2">
 					<div className="padding">
 						<p>
-							Un espacio donde aprenderás a{' '}
+							Si de algo estamos seguros es que{' '}
 							<span>
-								descubrir y comunicar la esencia de tu marca,
-							</span>{' '}
-							a crear historias que conecten, a contruir
-							relaciones significativas con tu audiencia y a
-							entender la comunicación como base de tu negocio.
+								una buena idea siempre debe ir acompañada de una
+								INCREÍBLE estrategia comercial.
+							</span>
 						</p>
 						<p>
-							Junstos descubriremos como{' '}
+							Este curso aprenderás a orientar estratégicamene tus
+							ideas para volverlas rentables,{' '}
 							<span>
-								multiplicar lo que tienes para ek mundo.
-								Comunicando con tu poder.
+								con visión en ganancia y proyección en
+								crecimiento.
 							</span>
 						</p>
 					</div>
@@ -60,4 +60,4 @@ const ViewEdu3 = () => {
 	);
 };
 
-export default ViewEdu3;
+export default CommercialSlide;

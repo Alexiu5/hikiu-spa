@@ -1,17 +1,16 @@
 import React from 'react';
-import './styles_views/Edu4.scss';
-import icon from '../../../../assets/svg/cuatro_active.svg';
-import imgIcon from '../../../../assets/svg/educacion_cuatro.svg';
+// import './styles_views/Edu3.scss';
+import icon from '../../../../assets/svg/tres_active.svg';
+import imgIcon from '../../../../assets/svg/educacion_tres.svg';
 
 const educacion = {
 	hikiu: 'HIKIU',
-	titulo_rojo: 'COMERCIAL',
-	texto_morado: 'Fórmula para',
-	texto_morado1: 'RENTABILIZAR TUS IDEAS',
+	titulo_rojo: 'COMUNICANDO CON SENTIDO',
+	texto_morado: 'Fórmula para multiplicar',
+	texto_morado1: 'LA VOZ DE TU MARCA',
 	icono: 'icono',
 };
-
-const ViewEdu4 = () => {
+const CommunicateSlide = () => {
 	const {
 		hikiu,
 		titulo_rojo,
@@ -20,7 +19,7 @@ const ViewEdu4 = () => {
 		texto_morado1,
 	} = educacion;
 	return (
-		<div className="container-edu4">
+		<div>
 			<div className="section-view1">
 				<div className="wiew1-1">
 					<img src={icon} alt="" />
@@ -39,18 +38,19 @@ const ViewEdu4 = () => {
 				<div className="wiew2-2">
 					<div className="padding">
 						<p>
-							Si de algo estamos seguros es que{' '}
+							Un espacio donde aprenderás a{' '}
 							<span>
-								una buena idea siempre debe ir acompañada de una
-								INCREÍBLE estrategia comercial.
-							</span>
+								descubrir y comunicar la esencia de tu marca,
+							</span>{' '}
+							a crear historias que conecten, a contruir
+							relaciones significativas con tu audiencia y a
+							entender la comunicación como base de tu negocio.
 						</p>
 						<p>
-							Este curso aprenderás a orientar estratégicamene tus
-							ideas para volverlas rentables,{' '}
+							Junstos descubriremos como{' '}
 							<span>
-								con visión en ganancia y proyección en
-								crecimiento.
+								multiplicar lo que tienes para ek mundo.
+								Comunicando con tu poder.
 							</span>
 						</p>
 					</div>
@@ -60,4 +60,4 @@ const ViewEdu4 = () => {
 	);
 };
 
-export default ViewEdu4;
+export default CommunicateSlide;

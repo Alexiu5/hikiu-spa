@@ -1,35 +1,25 @@
 import React, { useState } from 'react';
 import Icon from '../icons/Icon';
 import './style.scss';
-import Education from './views/Education';
+import Education from './views/Education.component';
 import Innovation from './views/Innovation';
 import Strategies from './views/Strategies';
 import Lang from './es';
 import Figure from '../philosophy/figures/figure';
 import arrow_down from '../../assets/svg/arrow_down.svg';
 
+const constants = {
+	EDUCATION: 'education',
+	STRATEGIES: 'strategies',
+	INNOVATION: 'innovation',
+};
+
 const Pillars = () => {
-	const [stateEducation, setStateEducation] = useState(true);
-	const [stateStrategies, setStateStrategies] = useState(false);
-	const [stateInnovation, setStateInnovation] = useState(false);
+	const [section, setSection] = useState(constants.EDUCATION);
 
-	const handleEducation = () => {
-		setStateEducation(true);
-		setStateStrategies(false);
-		setStateInnovation(false);
-	};
-
-	const handleStrategies = () => {
-		setStateEducation(false);
-		setStateStrategies(true);
-		setStateInnovation(false);
-	};
-
-	const handleInnovation = () => {
-		setStateEducation(false);
-		setStateStrategies(false);
-		setStateInnovation(true);
-	};
+	const handleEducation = () => setSection(constants.EDUCATION);
+	const handleStrategies = () => setSection(constants.STRATEGIES);
+	const handleInnovation = () => setSection(constants.INNOVATION);
 
 	return (
 		<section id="pilares">
@@ -37,10 +27,15 @@ const Pillars = () => {
 			<div className="card-container">
 				<Figure customclass="bg-circle figure-rotate" />
 				<div className="container-grid">
-					<div onClick={() => handleEducation()} className="active" data-aos="fade-right" data-aos-duration="700">
+					<div
+						onClick={() => handleEducation()}
+						className="active"
+						data-aos="fade-right"
+						data-aos-duration="700"
+					>
 						<Icon
 							iconName="educacion_active"
-							isActive={stateEducation}
+							isActive={section === constants.EDUCATION}
 						/>
 						<h3>{Lang.pilares.navSection.educacion}</h3>
 					</div>
@@ -52,14 +47,19 @@ const Pillars = () => {
 					>
 						<Icon
 							iconName="estrategias_active"
-							isActive={stateStrategies}
+							isActive={section === constants.STRATEGIES}
 						/>
 						<h3>{Lang.pilares.navSection.estrategias}</h3>
 					</div>
-					<div onClick={() => handleInnovation()} className="active" data-aos="fade-left" data-aos-duration="700">
+					<div
+						onClick={() => handleInnovation()}
+						className="active"
+						data-aos="fade-left"
+						data-aos-duration="700"
+					>
 						<Icon
 							iconName="innovacion_active"
-							isActive={stateInnovation}
+							isActive={section === constants.INNOVATION}
 						/>
 						<h3>{Lang.pilares.navSection.innovacion}</h3>
 					</div>
@@ -68,8 +68,8 @@ const Pillars = () => {
 					<div className="text one">
 						<p>
 							Creemos en la{' '}
-							<strong>educación y colaboración</strong> como motor
-							de cambio y crecimiento.
+							<strong>educación y colaboración </strong>
+							como motor de cambio y crecimiento.
 						</p>
 						<p>
 							Cursos, Worsshops y conocimiento disruptivos para
@@ -87,13 +87,13 @@ const Pillars = () => {
 						</p>
 						<p>y conozcas el increíble mundo de emprender</p>
 					</div>
-					<img src={arrow_down} className="arrow-down"/>
+					<img src={arrow_down} className="arrow-down" />
 				</div>
 			</div>
 			<div className="slider-container">
-				{stateEducation && <Education />}
-				{stateStrategies && <Strategies />}
-				{stateInnovation && <Innovation />}
+				{section === constants.EDUCATION && <Education />}
+				{section === constants.STRATEGIES && <Strategies />}
+				{section === constants.INNOVATION && <Innovation />}
 			</div>
 		</section>
 	);

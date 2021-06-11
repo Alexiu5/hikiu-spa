@@ -4,7 +4,7 @@ import Philosophy from '../components/philosophy/Philosophy.component';
 import OurTeam from '../components/our-team/OurTeam.component';
 import ContactComponent from '../components/contact/contact.component';
 import FooterComponent from '../components/layout/footer/footer.component';
-import Pillars from '../components/pillars/Pillars';
+import Pillars from '../components/pillars/Pillars.component';
 import Works from '../components/works/works.component';
 import '../App.scss';
 import { useState, useEffect } from 'react';

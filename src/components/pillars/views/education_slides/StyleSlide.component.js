@@ -25,7 +25,7 @@ const educacion = {
 		},
 	],
 };
-const ViewEdu1 = () => {
+const StyleSlide = () => {
 	const {
 		hikiu,
 		titulo_rojo,
@@ -57,15 +57,11 @@ const ViewEdu1 = () => {
 					<div className="wiew2-2">
 						<div className="padding">
 							<p>
-								Todo emprendedor debe estar dispuesto a{' '}
-								<span>cambiar hábitos, generar</span>
-								<span>
-									cambios, abrir su mente a nuevas ideas,
-								</span>{' '}
-								y debe estar listo para todo Juntos aprenderemos
-								sobre <span>práticas</span> que te permitan
-								llegar lejos, fortalecerte y conectarte con tu
-								ser para ejecutar <span>mejor tu hacer.</span>
+								Todo emprendedor debe estar dispuesto a <span>cambiar hábitos, generar</span> 
+								<span> cambios, abrir su mente a nuevas ideas, </span> y debe estar listo 
+								para todo Juntos aprenderemos sobre <span>práticas</span> que te permitan 
+								llegar lejos, fortalecerte y conectarte con tu ser para ejecutar 
+								<span>mejor tu hacer.</span>
 							</p>
 						</div>
 					</div>
@@ -95,4 +91,4 @@ const ViewEdu1 = () => {
 	);
 };
 
-export default ViewEdu1;
+export default StyleSlide;

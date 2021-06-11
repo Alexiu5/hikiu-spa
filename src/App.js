@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import {
 	Redirect,
 	Route,
@@ -12,22 +12,20 @@ import './App.scss';
 // Pages
 import HomePage from './pages/home.page';
 
-class App extends Component {
-	componentDidMount(){
+const App = () => {
+	useEffect(() => {
 		AOS.init();
-	}
+	}, []);
 
-	render() {
-		return (
-			<Router>
-				<Switch>
-					<Route exact path={routes.PATH_HOME} component={HomePage} />
+	return (
+		<Router>
+			<Switch>
+				<Route exact path={routes.PATH_HOME} component={HomePage} />
 
-					<Redirect to={routes.PATH_HOME} />
-				</Switch>
-			</Router>
-		);
-	}
-}
+				<Redirect to={routes.PATH_HOME} />
+			</Switch>
+		</Router>
+	);
+};
 
 export default App;
