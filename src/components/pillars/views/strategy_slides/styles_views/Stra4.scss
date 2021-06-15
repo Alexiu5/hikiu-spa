@@ -61,17 +61,24 @@
       border-radius: 15px;
     }
   }
+}
 
-  @include respond-to('medium') {
-    width: 90%;
-  
-    .Stra4-section-view2 {
-      padding: 1em;
-      justify-content: center;
-      p {
-        font-size: 8px;
-        position: relative;
-        left: -10px;
+@include respond-to('small') {
+  .container-Stra4 {
+    width: 95%;
+
+    .section-view1 {
+      grid-template-columns: 100%;
+    }
+
+    .div-father {
+      .Stra4-section-view2  {
+        flex-direction: column;
+        padding: 1em;
+        p {
+          margin: .5em 0;
+          width: 100%;
+        }
       }
     }
   }

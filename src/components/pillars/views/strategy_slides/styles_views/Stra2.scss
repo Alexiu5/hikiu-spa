@@ -70,15 +70,25 @@
       }
     }
 
-    @include respond-to('medium') {
-      width: 90%;
-    
+}
+
+@include respond-to('small') {
+  .container-Stra2 {
+    width: 95%;
+
+    .section-view1 {
+      grid-template-columns: 100%;
+    }
+
+    .div-father {
       .section-view2 {
-        p {
-          font-size: 8px;
-          position: relative;
-          left: -10px;
+        grid-template-columns: 100%;
+        padding: 1em 3em;
+
+        div {
+          margin: .5em 0;
         }
       }
     }
+  }
 }

@@ -90,15 +90,24 @@
     }
   }
 
-  @include respond-to('medium') {
-    width: 90%;
-  
-    .view2-1,
-    .view2-2 {
-      p {
-        font-size: 8px;
-        position: relative;
-        left: -10px;
+}
+
+@include respond-to('small') {
+  .container-Stra3 {
+    width: 95%;
+
+    .section-view1 {
+      grid-template-columns: 100%;
+    }
+
+    .div-father {
+      .Stra3-section-view2 {
+        grid-template-columns: 100%;
+        padding: 0em 1em;
+        gap: 0;
+        div {
+          margin: .5em 0;
+        }
       }
     }
   }
