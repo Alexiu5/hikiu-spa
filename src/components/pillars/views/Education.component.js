@@ -21,6 +21,7 @@ const Education = () => {
 				<CommercialSlide />
 			</Slider>
 		</div>
+		
 	);
 };
 

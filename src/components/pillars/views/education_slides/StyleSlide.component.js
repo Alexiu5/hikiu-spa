@@ -1,89 +1,79 @@
 import React from 'react';
-import './styles_views/Edu1.scss';
 import icon from '../../../../assets/svg/uno_active.svg';
 import imgIcon from '../../../../assets/svg/educacion_uno.svg';
+import './slides.scss';
 
-const educacion = {
+const education = {
 	hikiu: 'HIKIU',
-	titulo_rojo: 'STYLE',
-	texto_morado: 'Fórmula para pensar',
-	texto_morado_b: 'como un empredendedor',
+	main_title: 'STYLE',
+	primary_title: 'Fórmula para pensar',
+	secondary_title: 'como un empredendedor',
 	icono: 'icono',
-	titulo_unico: 'APRENDIZAJES:',
-	unico: [
-		{
-			texto1: 'Estilo de vida del emprendedor',
-			texto2: 'control del tiempo',
-		},
-		{
-			texto1: 'hábitos saludables',
-			texto2: 'Eliminar bloqueos mentales',
-		},
-		{
-			texto1: 'Fortaleza mental y emocional',
-			texto2: 'Mentes creativas',
-		},
-	],
+	card_title: 'APRENDIZAJES:',
+	card: {
+		first_block: ['Estilo de vida del emprendedor', 'control del tiempo'],
+		second_block: ['hábitos saludables', 'Eliminar bloqueos mentales'],
+		third_block: ['Fortaleza mental y emocional', 'Mentes creativas'],
+	},
 };
-const StyleSlide = () => {
-	const {
-		hikiu,
-		titulo_rojo,
-		texto_morado,
-		icono,
-		titulo_unico,
-		unico,
-		texto_morado_b,
-	} = educacion;
 
+const StyleSlide = () => {
 	return (
 		<div>
-			<div className="container-edu1">
-				<div className="section-view1">
-					<div className="wiew1-1">
+			<div className="slide">
+				<div className="slide-header">
+					<div className="slide-header-image">
 						<img src={icon} alt="" />
 					</div>
-					<div className="wiew1-2">
-						<h3>{hikiu}</h3>
-						<h4>{titulo_rojo}</h4>
-						<p>{texto_morado}</p>
-						<h5 className="bold">{texto_morado_b}</h5>
+					<div className="slide-header-text">
+						<h3>HIKIU</h3>
+						<h4>{education.main_title}</h4>
+						<p>{education.primary_title}</p>
+						<h5 className="bold">{education.secondary_title}</h5>
 					</div>
 				</div>
-				<div className="section-view2">
-					<div className="wiew2-1">
+				<div className="slide-content">
+					<div className="slide-content-logo">
 						<img src={imgIcon} alt="" />
 					</div>
-					<div className="wiew2-2">
-						<div className="padding">
-							<p>
-								Todo emprendedor debe estar dispuesto a <span>cambiar hábitos, generar</span> 
-								<span> cambios, abrir su mente a nuevas ideas, </span> y debe estar listo 
-								para todo Juntos aprenderemos sobre <span>práticas</span> que te permitan 
-								llegar lejos, fortalecerte y conectarte con tu ser para ejecutar 
-								<span>mejor tu hacer.</span>
-							</p>
-						</div>
+					<div className="slide-content-text">
+						<p>
+							Todo emprendedor debe estar dispuesto a{' '}
+							<span>cambiar hábitos, generar</span>
+							<span>
+								{' '}
+								cambios, abrir su mente a nuevas ideas,{' '}
+							</span>{' '}
+							y debe estar listo para todo lo grande que viene
+							detras.
+						</p>
+						<br />
+						<p>
+							Juntos aprenderemos sobre <span>práticas</span> que
+							te permitan llegar lejos, fortalecerte y conectarte
+							con tu ser para ejecutar
+							<span> mejor tu hacer.</span>
+						</p>
 					</div>
 				</div>
-				<div className="section-view3">
-					<div className="title">{titulo_unico}</div>
-					<div className="div-father">
-						<div className="view3-grid">
-							<div className="after">
-								<p>{unico[0].texto1}</p>
-								<p>{unico[0].texto2}</p>
+				<div className="slide-frame">
+					<div className="slide-frame-box">
+						<div className="slide-frame-title">{education.card_title}</div>
+						<div className="slide-frame-grid">
+							<div className="frame-grid-bar">
+								<p>{education.card.first_block[0]}</p>
+								<p>{education.card.first_block[1]}</p>
 							</div>
-							<div className="after">
-								<p>{unico[1].texto1}</p>
-								<p>{unico[1].texto2}</p>
+							<div className="frame-grid-bar">
+								<p>{education.card.second_block[0]}</p>
+								<p>{education.card.second_block[1]}</p>
 							</div>
-							<div className="after">
-								<p>{unico[2].texto1}</p>
-								<p>{unico[2].texto2}</p>
+							<div className="frame-grid-bar">
+								<p>{education.card.third_block[0]}</p>
+								<p>{education.card.third_block[1]}</p>
 							</div>
 						</div>
-						<div className="border-purple"></div>
+						<div className="slide-frame-border"></div>
 					</div>
 				</div>
 			</div>
