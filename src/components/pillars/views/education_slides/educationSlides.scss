@@ -121,3 +121,44 @@
     }
   }
 }
+
+@include respond-to('small') {
+  .slide {
+    &-header {
+      grid-template-columns: 15% 85%;
+
+      &-image {
+        img {
+          width: 50px;
+        }
+      }
+    }
+
+    &-content {
+      grid-template-columns: 100%;
+
+      &-logo {
+        display: none;
+      }
+
+      &-text {
+        width: 95%;
+        font-size: .9rem;
+      }
+    }
+
+    &-frame {
+      width: 95%;
+      font-size: .7rem;
+
+      &-grid {
+        padding: .5em 1em;
+        grid-template-columns: 100%;
+        .frame-grid-bar {
+          padding: .5em;
+        }
+      }
+
+    }
+  }
+}

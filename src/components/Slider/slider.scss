@@ -49,3 +49,22 @@
 
   }
 }
+
+@include respond-to('small') {
+  .slides-parent {
+    height: 90vh;
+    & .slides {
+      & .slide-item {
+        width: 95vw;
+        margin: 0 2.5vw;
+      }
+    }
+
+    .arrow {
+      width: 25px;
+      height: 25px;
+      margin: 0 5%;
+    }
+  }
+
+}
