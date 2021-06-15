@@ -1,7 +1,7 @@
 import React from 'react';
 import icon from '../../../../assets/svg/uno_active.svg';
 import imgIcon from '../../../../assets/svg/educacion_uno.svg';
-import './slides.scss';
+import './educationSlides.scss';
 
 const education = {
 	hikiu: 'HIKIU',

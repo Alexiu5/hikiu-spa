@@ -1,5 +1,5 @@
 import React from 'react';
-import './slides.scss';
+import './educationSlides.scss';
 import icon from '../../../../assets/svg/dos_active.svg';
 import imgIcon from '../../../../assets/svg/educacion_dos.svg';
 
@@ -30,14 +30,14 @@ const StrategySlide = () => {
 				</div>
 				<div className="slide-content-text">
 					<p>
-						En este curso aprenderás a{' '}
-						<span>pensar y actuar estratégicamente.</span>
+						En este curso aprenderás a
+						<span> pensar y actuar estratégicamente. </span>
 						Te daremos las bases para cultivar en tu negocio la
-						investigación de tu público y tu entorno.{' '}
-						<span>Saber preguntar, indagar y escuchar</span>
-						<span>asertivamente,</span> para poder entender y crear
-						tu modelo de negocio, y descubrir cúal es tu prropuesta
-						de valor, <span>eso que te hace único</span>
+						investigación de tu público y tu entorno.
+						<span> Saber preguntar, indagar y escuchar asertivamente,
+						</span> para poder entender y crear tu modelo de 
+						negocio, y descubrir cúal es tu prropuesta de valor, 
+						<span> eso que te hace único.</span>
 					</p>
 				</div>
 			</div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './slides.scss';
+import './educationSlides.scss';
 import icon from '../../../../assets/svg/tres_active.svg';
 import imgIcon from '../../../../assets/svg/educacion_tres.svg';
 
