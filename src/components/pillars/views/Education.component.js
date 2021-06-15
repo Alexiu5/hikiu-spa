@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import StyleSlide from './education_slides/StyleSlide.component';
 import StrategySlide from './education_slides/StrategySlide.component';
 import CommunicateSlide from './education_slides/CommunicateSlide.component';

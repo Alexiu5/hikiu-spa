@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Icon from '../icons/Icon';
 import './style.scss';
 import Education from './views/Education.component';
-import Innovation from './views/Innovation';
-import Strategies from './views/Strategies';
+import Innovation from './views/Innovation.component';
+import Strategy from './views/Strategy.component';
 import Lang from './es';
 import Figure from '../philosophy/figures/figure';
 import arrow_down from '../../assets/svg/arrow_down.svg';
@@ -92,7 +92,7 @@ const Pillars = () => {
 			</div>
 			<div className="slider-container">
 				{section === constants.EDUCATION && <Education />}
-				{section === constants.STRATEGIES && <Strategies />}
+				{section === constants.STRATEGIES && <Strategy />}
 				{section === constants.INNOVATION && <Innovation />}
 			</div>
 		</section>
