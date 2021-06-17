@@ -6,7 +6,7 @@ const Profile = ({ image, custom }) => {
 		<div id="photo-container">
 			<div className={`team-member ${custom ? 'space-4' : 'space-20'}`}>
 				{
-					custom ? (<img className="custom" src={`${filesUrl}/${image}`} alt="nuestro equipo" />) : (<><img src={image} alt="nuestro equipo" /><div className="circle"></div> </>)
+					custom ? (<div className='custom' style={{backgroundImage: `url(${filesUrl}/${image})`}}> </div>) : (<div className="circle"></div>)
 				}
 			</div>
 		</div>
